@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src &apos;self&apos; data: gap: https://ssl.gstatic.com &apos;unsafe-eval&apos;; style-src &apos;self&apos; &apos;unsafe-inline&apos;; media-src *; img-src &apos;self&apos; data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="js/jquery-1.5.0.mobile.min.css">
+		<style>
+		/* For avoiding title truncation in wp8 */
+		.ui-header .ui-title {
+				overflow: visible !important;
+		}
+		/* For fixing the absolute position issue for the default cordova gen page*/
+		#cjp-accordion1 .app {
+				left: 5px !important;
+				margin: 5px !important;
+				position: relative !important;
+		}
+		</style>
+         <title>Financial Calculator</title>
+		</head>
+		<body>		<!-- page 1 -->
+			<div data-role="page" id="homePage">
+				<div data-role="header">
+					<h1>Home</h1>
+				</div>
+				<ul data-role="listview" >
+					<li><a  class="listStyle" href="#page1">Home Loan</a></li>
+					<li><a class="listStyle" href="#page2">Car Loan</a></li>
+					<li><a class="listStyle" href="#page3">Personal Loan</a></li>
+					<li><a id="pageN" class="listStyle"  href="#pageN">Fixed Deposit</a></li>					
+				</ul>
+				
+				<div data-role="footer" data-position="fixed">
+					<h1>Home</h1>
+				</div><!-- /footer -->
+			</div> <!-- home page -->
+	
+			<!-- page 1 -->
+			<div data-role="page" id="page1">
+				<div data-role="header">
+					<a href="#" data-icon="back" data-rel="back" title="Go back">Back</a>
+					<h1>Home Loan</h1>
+				</div>
+	
+						<div class="ui-content mainContainer">
+	<div class="mainContent">
+				<h1>Home Loan Calculator</h1>
+				<label>Amount</label><input id="homeAmount" type="text" />
+				<label>Interest Rate (%)</label><input id="homeRate"  class="interestInput" type="text" />
+				<label>Loan Tenure (Months)</label><input id="homeTime" type="text" />
+	
+				<label>Loan EMI</label><input id="homeEMI" type="text" disabled/>
+				<label>Interest Payable</label><input id="homeInterestPayable" type="text" disabled/>
+				<label>Total Payment</label><input id="homeTotalPayment" type="text" disabled/>
+				
+			</div>			</div><!-- end page 1 content -->
+				
+				<div data-role="footer" data-position="fixed">
+					<h1>Home Loan</h1>
+				</div><!-- /footer -->
+			</div><!-- /page1 -->
+	
+			<!-- page 2 -->
+			<div data-role="page" id="page2">
+				<div data-role="header">
+					 <a href="#" data-icon="back" data-rel="back" title="Go back">Back</a>
+					<h1>Car Loan</h1>
+				</div>
+	
+				<div class="ui-content mainContainer">
+					<div class="mainContent">
+						<h1>car Loan Calculator</h1>
+						<label>Amount</label><input id="carAmount" type="text" />
+						<label>Interest Rate (%)</label><input id="carRate"  class="interestInput" type="text" />
+						<label>Loan Tenure (Months)</label><input id="carTime" type="text" />
+			
+						<label>Loan EMI</label><input id="carEMI" type="text" disabled/>
+						<label>Interest Payable</label><input id="carInterestPayable" type="text" disabled/>
+						<label>Total Payment</label><input id="carTotalPayment" type="text" disabled/>
+						
+					</div>	
+				</div><!-- end page 2 content -->
+	
+				<div data-role="footer" data-position="fixed">
+					<h1>Car Loan</h1>
+				</div><!-- /footer -->
+			</div><!-- /page2 -->
+	
+			<!-- page 3 -->
+			<div data-role="page" id="page3">
+				<div data-role="header">
+				<a href="#" data-icon="back" data-rel="back" title="Go back">Back</a>
+					<h1>Personal Loan</h1>
+				</div>
+	
+				<div class="ui-content mainContainer">
+						<div class="mainContent">
+				<h1>personal Loan Calculator</h1>
+				<label>Amount</label><input id="personalAmount" type="text"/>
+				<label>Interest Rate (%)</label><input id="personalRate" class="interestInput" type="text" />
+				<label>Loan Tenure (Months)</label><input id="personalTime" type="text" />
+	
+				<label>Loan EMI</label><input id="personalEMI" type="text" disabled/>
+				<label>Interest Payable</label><input id="personalInterestPayable" type="text" disabled/>
+				<label>Total Payment</label><input id="personalTotalPayment" type="text" disabled/>
+				
+			</div>	
+				</div><!-- end page 3 content -->
+	
+				<div data-role="footer" data-position="fixed">
+					<h1>Personal Loan</h1>
+				</div><!-- /footer -->
+			</div><!-- /page3 -->
+
+			
+			<!-- page 3 -->
+			<div data-role="page" id="pageN">
+				<div data-role="header">
+				<a href="#" data-icon="back" data-rel="back" title="Go back">Back</a>
+					<h1 id="pageNheading1">Page Main Heading</h1>
+				</div>
+	
+				<div id="mainContentParent" class="ui-content mainContainer">
+						<div id ="mainContent" class="mainContent">
+
+				<h1 id="pageNheading2">Page Heading</h1>
+				<div id="contentBody">
+				<label id="XAmountLabel">Amount</label>
+				<input id="XAmount" type="text"/>
+				
+				<label id="XRateLabel">Interest Rate (%)</label>
+				<input id="XRate" class="interestInput" type="number" />
+
+				<label id="XTimeLabel">Tenure</label>
+				<input id="XTime" type="number" />
+	
+				<label id="XEMILabel">Loan EMI</label>
+				<input id="XEMI" type="text" disabled/>
+
+				<label id="XInterestPayableLabel">Interest Payable</label>
+				<input id="XInterestPayable" type="text" disabled/>
+
+				<label id="XTotalPaymentLabel">Total Payment</label>
+				<input id="XTotalPayment" type="text" disabled/>
+			</div>
+			</div>	
+				</div><!-- end page 3 content -->
+	
+				<div data-role="footer" data-position="fixed">
+					<h1 id="XFooter">Personal Loan</h1>
+				</div><!-- /footer -->
+			</div><!-- /page3 -->
+<script type="text/javascript" src="cordova.js"></script>
+<!-- <script type="text/javascript" src="js/businessLogic.js"></script> -->
+<script type="text/javascript" src="js/jquery-1.11.1.min.js" id="cordova-jquery"></script>
+<script type="text/javascript" id="jqm-trans-disable">
+		/* For having a faster transition */
+		$(document).on("mobileinit", function() {
+				$.mobile.defaultPageTransition = "none";
+				$.mobile.defaultDialogTransition = "none";
+		});
+		</script>
+		<script type="text/javascript" src="js/jquery-1.5.0.mobile.min.js"></script>
+		
+		<script type="text/javascript" src="js/index.js"></script>
+		
+		
+	</body>
+</html>

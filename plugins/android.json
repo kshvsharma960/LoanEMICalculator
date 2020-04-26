@@ -1,0 +1,18 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "io.calculator.LoanEMI"
+    },
+    "com.pollfish.cordova": {
+      "PACKAGE_NAME": "io.calculator.LoanEMI"
+    }
+  },
+  "dependent_plugins": {}
+}

@@ -1,0 +1,50 @@
+{
+  "_from": "git+https://github.com/pollfish/cordova-plugin-pollfish.git",
+  "_id": "com.pollfish.cordova@0.0.7",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/com.pollfish.cordova",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/pollfish/cordova-plugin-pollfish.git",
+    "rawSpec": "https://github.com/pollfish/cordova-plugin-pollfish.git",
+    "saveSpec": "git+https://github.com/pollfish/cordova-plugin-pollfish.git",
+    "fetchSpec": "https://github.com/pollfish/cordova-plugin-pollfish.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/pollfish/cordova-plugin-pollfish.git#8e91ac56d527963ac0d71cc6c7d7459aa8b0b609",
+  "_spec": "https://github.com/pollfish/cordova-plugin-pollfish.git",
+  "_where": "E:\\cordova\\EMICalculator",
+  "bundleDependencies": false,
+  "cordova_name": "PollfishPlugin",
+  "deprecated": false,
+  "description": "Pollfish Cordova/PhoneGap plugin",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.4.0"
+    }
+  ],
+  "keywords": [
+    "pollfish",
+    "cordova",
+    "phonegap",
+    "mobile",
+    "surveys",
+    "monetization",
+    "money",
+    "sdk",
+    "plugin"
+  ],
+  "name": "com.pollfish.cordova",
+  "platforms": [
+    "android",
+    "ios"
+  ],
+  "version": "0.0.7"
+}

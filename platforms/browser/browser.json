@@ -1,0 +1,32 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "io.cordova.hellocordova"
+    },
+    "com.pollfish.cordova": {
+      "PACKAGE_NAME": "io.calculator.LoanEMI"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "file": "plugins/com.pollfish.cordova/www/pollfishplugin.js",
+      "id": "com.pollfish.cordova.pollfishplugin",
+      "pluginId": "com.pollfish.cordova",
+      "clobbers": [
+        "pollfishplugin"
+      ]
+    }
+  ],
+  "plugin_metadata": {
+    "cordova-plugin-whitelist": "1.3.4",
+    "com.pollfish.cordova": "0.0.7"
+  }
+}

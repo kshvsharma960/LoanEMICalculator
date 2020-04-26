@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Loan EMI Calculator",
+  "short_name": "Loan EMI Calculator",
+  "version": "io.calculator.LoanEMI",
+  "description": "A simple financial calculator for all your Loan Calculation and EMI revealer.",
+  "author": "InnovativeDevelopers",
+  "icons": [],
+  "start_url": "index.html"
+}
